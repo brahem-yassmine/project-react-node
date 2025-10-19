@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fugaz+One&display=swap');
+
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --accent-color: #4cc9f0;
+  --light-blue: #B6D8F2;
+  --white: #ffffff;
+  --text-color: #2b2d42;
+  --text-light: #6c757d;
+  --error-color: #ef233c;
+  --success-color: #4ad66d;
+  --border-radius: 12px;
+  --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.all, .all2 {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--light-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.main {
+  background-color: var(--white);
+  width: 100%;
+  max-width: 1000px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  overflow: hidden;
+}
+
+#main2 {
+  height: auto;
+}
+
+.image {
+  width: 50%;
+  object-fit: cover;
+}
+
+.formulaire {
+  width: 50%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Fugaz One', cursive;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+label {
+  font-weight: 500;
+  color: var(--text-color);
+  margin-top: 1rem;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #e0e0e0;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+.role-selector {
+  margin: 1.5rem 0;
+}
+
+.role-selector label {
+  display: inline;
+  margin-left: 0.5rem;
+  margin-right: 1.5rem;
+  font-weight: 400;
+}
+
+.mybtn {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  padding: 0.8rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  transition: var(--transition);
+  width: 28%;
+  margin-left: 130px;
+}
+.mybtnLog{
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  padding: 0.8rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  transition: var(--transition);
+  width: 22%;
+  margin-left: 130px;
+  
+}
+
+.mybtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn, .btn1 {
+  background: none;
+  color: var(--primary-color);
+  box-shadow: none;
+  text-decoration: underline;
+  padding: 0;
+  margin: 0.5rem 0;
+  text-align: center;
+  width: auto;
+  align-self: center;
+}
+
+.btn:hover, .btn1:hover {
+  transform: none;
+  box-shadow: none;
+  color: var(--secondary-color);
+}
+
+.message {
+  padding: 0.8rem;
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.error {
+  background-color: rgba(239, 35, 60, 0.1);
+  color: var(--error-color);
+}
+
+.success {
+  background-color: rgba(74, 214, 109, 0.1);
+  color: var(--success-color);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+  
+  .image, .formulaire {
+    width: 100%;
+  }
+  
+  .image {
+    height: 200px;
+    order: -1;
+  }
+  
+  .formulaire {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .all, .all2 {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+}

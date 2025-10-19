@@ -1,0 +1,14 @@
+#contact{
+    display: inline-block;
+    
+}
+.titleContact{
+    font-size: 80px;
+    margin-bottom: 20px;
+    margin-left: 160px;
+}
+.sous-titre{
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 100px;
+}
